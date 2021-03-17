@@ -30,7 +30,6 @@ function listItems( array ){
     console.log( array[i] );
   }
 }
-
 console.log( `Basket is: ${basket}`);
 listItems( basket );
 
@@ -39,12 +38,22 @@ console.log( '***** Reseting Basket Array *****' );
 function empty ( array ){
   console.log( 'in empty:', array);
   array.length = 0;
+  return array;
 }
 
-console.log( `Basket is: ${basket}`);
-empty(basket);
-console.log( `Basket is now: ${basket}`);
+console.log( `Basket is: ${basket}` );
+console.log( 'Emptying array:', empty(basket) );
+console.log( `Basket is now: ${basket}` );
 
-// Create a function called empty. It should:
-//
-// reset the basket to an empty array
+console.log( '***** Stretch Goals: Using Functions in Other Functions!' );
+
+const maxItems = 5;
+function isFull( array ){
+  console.log( 'in isFull:', array );
+  if ( array.length < maxItems ){
+    return false;
+  } else if ( array.length >= maxItems ){
+    return true;
+  }
+}
+console.log( isFull(basket) );
