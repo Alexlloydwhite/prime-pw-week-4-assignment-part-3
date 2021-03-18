@@ -24,7 +24,7 @@ console.log( '***** Looping Thru The Basket Array *****' );
 
 function listItems( array ){
   console.log ( 'in listItems:', array );
-  for (i=0; i < array.length; i++){
+  for (let i=0; i < array.length; i++){
     console.log( array[i] );
   }
 }
@@ -59,7 +59,7 @@ console.log(basket);
 
 function removeItem ( item ){
   console.log( 'in removeItem:',item );
-  for (i=0;i<basket.length;i++){
+  for (let i=0;i<basket.length;i++){
       if ( basket.indexOf(item, 0) === item ){
         basket.splice(item);
         return item;
