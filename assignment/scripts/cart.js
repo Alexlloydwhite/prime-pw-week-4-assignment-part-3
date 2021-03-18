@@ -33,7 +33,7 @@ listItems( basket );
 
 console.log( '***** Reseting Basket Array *****' );
 function empty ( array ){
-  console.log( 'in empty:', array);
+  console.log('in empty:', array);
   array.length = 0;
   return array;
 }
@@ -64,17 +64,14 @@ function removeItem(item){
   if (index>=0){
     basket.splice(index,1);
     return item;
-  } else{
+  } else {
     return null;
   }
 }
+
 console.log('grape not in basket so this should return null;', removeItem('grape'));
 console.log('basket is now:',basket);
 console.log('removed:',removeItem('lemon'));
 console.log('basket is now:',basket);
 console.log('removed:',removeItem('apple'));
 console.log('basket is now:',basket);
-// ArrayindexOf(searchElement, fromIndex)
-// 1. The searchElement argument is the element that you want to find in the array.
-// 2. The fromIndex is an array index at which the function starts the search.
-// basket.indexOf('item');
