@@ -24,8 +24,8 @@ console.log( '***** Looping Thru The Basket Array *****' );
 
 function listItems( array ){
   console.log ( 'in listItems:', array );
-  for (let i=0; i < array.length; i++){
-    console.log( array[i] );
+  for (let item of basket){
+    console.log(item);
   }
 }
 console.log( `Basket is: ${basket}`);
