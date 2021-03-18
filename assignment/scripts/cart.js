@@ -54,23 +54,27 @@ function isFull( array ){
 console.log( 'The basket is empty so this should return false:', isFull(basket) );
 
 console.log( '***** Stretch Goals: Using Array Built-In Functions!' );
-basket.push('apple', 'oranges', 'lemons', 'cheese');
-console.log(basket);
 
-function removeItem ( item ){
-  console.log( 'in removeItem:',item );
-  for (let i=0;i<basket.length;i++){
-      if ( basket.indexOf(item, 0) === item ){
-        basket.splice(item);
-        return item;
-      } else {
-        return null;
-      }
-    }
+basket.push('apple', 'orange', 'lemon', 'cheese');
+console.log('basket is:',basket);
+
+function removeItem(item){
+  console.log('inremoveItem:', item);
+  let index = basket.indexOf(item);
+  if (index>=0){
+    basket.splice(index,1);
+    return item;
+  } else{
+    return null;
+  }
 }
-console.log( removeItem( 'apple' ) );
-console.log( basket );
-
+console.log('grape not in basket so this should return null;', removeItem('grape'));
+console.log('basket is now:',basket);
+console.log('removed:',removeItem('lemon'));
+console.log('basket is now:',basket);
+console.log('removed:',removeItem('apple'));
+console.log('basket is now:',basket);
 // ArrayindexOf(searchElement, fromIndex)
 // 1. The searchElement argument is the element that you want to find in the array.
 // 2. The fromIndex is an array index at which the function starts the search.
+// basket.indexOf('item');
