@@ -42,15 +42,15 @@ console.log( 'Emptying array:', empty(basket) );
 console.log( `Basket is now: ${basket}` );
 
 console.log( '***** Stretch Goals: Using Functions in Other Functions!' );
-const maxItems = 5;
-function isFull( array ){
-  console.log( 'in isFull:', array );
-  if ( array.length < maxItems ){
-    return false;
-  } else if ( array.length >= maxItems ){
-    return true;
-  }
-}
+// const maxItems = 5;
+// function isFull( array ){
+//   console.log( 'in isFull:', array );
+//   if ( array.length < maxItems ){
+//     return false;
+//   } else if ( array.length >= maxItems ){
+//     return true;
+//   }
+// }
 console.log( 'The basket is empty so this should return false:', isFull(basket) );
 
 console.log( '***** Stretch Goals: Using Array Built-In Functions!' );
